@@ -1,4 +1,8 @@
-[
+import React from 'react'
+
+
+
+const optical = [
     {
         "id": 1,
         "price": 30,
@@ -63,3 +67,18 @@
         "desc": "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. "
     }
 ]
+
+
+
+
+export default function items({ onChangeType }) {
+    return optical.map((icon, index) => {
+        return (
+            <div className='col-2 p-1 d-flex justify-content-center align-items-center align-content-center' key={index} onClick={() => { onChangeType(icon.url) }} >
+                <div className='d-flex card-body' >
+                    <img src={`./glassesImage/g${icon.id}.jpg`} alt="" style={{ objectFit: "contain", width: "150px" }} />
+                </div>
+            </div>
+        )
+    })
+}
