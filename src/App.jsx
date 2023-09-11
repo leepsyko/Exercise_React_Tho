@@ -1,7 +1,15 @@
 import React from 'react'
+import Movie from './movieCinema/Movie'
 
-export default function App() {
+
+
+function App() {
   return (
-    <div>App</div>
+
+    <Movie/>
+    
   )
 }
+
+
+export default App;
