@@ -5,7 +5,7 @@ export default function TicketCinema() {
 
   const dispatch = useDispatch()
 
-  const { selectedSeats,totalPrice } = useSelector((state) => {
+  const { selectedSeats, totalPrice } = useSelector((state) => {
     return state.cinema
   })
 
@@ -18,11 +18,11 @@ export default function TicketCinema() {
 
 
   return (
-    <div  style={{ height: "80vh", overflow: "auto", borderRadius:"10px", }} className="bg-dark">
-      <div className=' p-1 h-100 ' >
+    <div style={{ height: "80vh", overflow: "auto", borderRadius: "10px", }} className="bg-dark">
+      <div className=' p-1 h-100 '>
 
-        <table className='table  table-dark table-striped table-hover' >
-          <thead style={{position:"sticky", top:"0"}}>
+        <table className='table  table-dark table-striped table-hover'  >
+          <thead style={{ position: "sticky", top: "0" }}>
             <tr>
               <th style={{ width: "15%" }}>
                 Stt
@@ -50,13 +50,15 @@ export default function TicketCinema() {
               </tr>
             })}
           </tbody>
-          <tfoot style={{position:"sticky", bottom:"0"}}>
+          <tfoot style={{position:"sticky", top:"100%",}}>
            <tr>
             <td>Tổng Tiền</td>
             <td colSpan={3} className="bg-secondary">{totalPrice}</td>
             </tr> 
           </tfoot>
         </table>
+
+        
       </div>
     </div>
 
